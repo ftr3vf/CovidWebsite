@@ -159,3 +159,24 @@ html, body {
     opacity: 1
   }
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones and tablets: */
+  [class*="col-"] {
+      width: 100%;
+  }  
+} 
+@media only screen and (min-width: 768px) {
+  /*for desktops*/
+  .row{width:100%}
+  .col-12 {width: 100%;}
+
+  .col-8 {width: 66.66%;}
+  .col-6 {width: 49.99%;}
+  .col-5 {width: 41.66%;}
+  .col-4 {width: 33.33%;}
+  .col-2 {width: 16.66%;}
+  .col-1 {width: 8.33%}
+} 
