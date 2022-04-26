@@ -108,6 +108,23 @@
               }
             }
 
+            if (test.toLowerCase() == "antibody"){
+              if (result.toLowerCase() == "positive"){
+                if (vaccine.toLowerCase() == "vaccinated"){
+                  var element = document.getElementById('reccomendation');
+                  element.innerHTML = "It cannot be determined whether the antibodies present in your body are caused by a past Covid-19 infection or are from your Covid-19 vaccine. We reccomend you follow up with a different PCR test and quarantine in the mean time to limit contact with others.";
+                }
+                if (vaccine.toLowerCase() == "unvaccinated"){
+                  var element = document.getElementById('reccomendation');
+                  element.innerHTML = "We believe you have been infected with Covid-19 in the past.";
+                }
+              }
+              if (result.toLowerCase() == "negative"){
+                var element = document.getElementById('reccomendation');
+                element.innerHTML = "Your vaccination status should be unvaccinated, and you most likely have not been infected with Covid-19 in the past.";
+              }
+            }
+
 
             
           }
