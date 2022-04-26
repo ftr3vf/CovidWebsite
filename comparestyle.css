@@ -1,0 +1,163 @@
+/*
+ * Globals
+ */
+
+/* Links */
+
+/* Custom default button */
+.btn-default {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+  animation: fade 1.5s;
+}
+
+
+/*
+ * Base structure
+ */
+
+html, body {
+  height: 100%;
+  /*background: url(home2.jpeg) no-repeat center center fixed; */
+  background-color: #1abc9c;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+  background-color: #34495e;
+  background-position: center;
+  background-size: cover;
+  animation: fade 1s;
+  /*height: 100%; */
+  /*min-height: 100%;*/
+}
+.site-container-inside {
+  display: table-cell;
+  vertical-align: top;
+  animation: fade 1.5s;
+}
+.main-container {
+  margin-right: auto;
+  margin-left: auto;
+  animation: fade 1.5s;
+}
+
+/* Padding for spacing */
+.inside {
+  padding: 30px;
+  animation: fade 1.5s;
+}
+
+
+/*
+ * Header
+ */
+.heading-brand {
+  margin-bottom: 0px;
+  animation: fade 1.5s;
+  color: white;
+}
+
+.heading-nav > li {
+  display: inline-block;
+  animation: fade 1.5s;
+}
+.heading-nav > li + li {
+  margin-left: 20px;
+  animation: fade 1.5s;
+}
+.heading-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+  animation: fade 1.5s;
+}
+.heading-nav > li > a:hover{
+  background-color: transparent;
+  color: #c0392b;
+  animation: fade 1.5s;
+}
+.heading-nav > .active > a{
+  color: #fff;
+  border-bottom-color: #fff;
+  animation: fade 1.5s;
+}
+
+@media (min-width: 768px) {
+  .heading-brand {
+    color: white;
+    float: left;
+    animation: fade 1.5s;
+  }
+  .heading-nav {
+    float: right;
+    animation: fade 1.5s;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.main {
+  padding: 0 20px;
+  color: white;
+  margin: auto;
+  width: 50%;
+  animation: fade 1.5s;
+
+}
+.main .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+  animation: fade 1.5s;
+}
+
+/*
+ * Affix and center
+ */
+
+@media () {
+  /* Pull out the header and footer */
+  .heading {
+    position: fixed;
+    top: 0;
+    animation: fade 1.5s;
+  }
+  /* Start the vertical centering */
+  .site-container-inside {
+    vertical-align: middle;
+    animation: fade 1.5s;
+  }
+
+}
+
+
+
+@keyframes fade {
+  0%{
+    opacity: 0.5;
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0);
+    opacity: 1
+  }
+}
