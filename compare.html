@@ -32,13 +32,86 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
             <h1>Compare Tests.</h1>
-            <p class="lead"></p>
-          </div>
+            <div class="container" style = "margin-top: 5%;
+        margin-bottom: 5%;
+        animation: fade 0.5s;">
+        <div class="row">
 
+            <div class="col-md-12" style="padding: 5%;
+            background: #0062cc;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+            background-color: #ecf0f1;
+            animation: fade 1.5s;">
+                <h3 style="text-align: center;
+                color: black;
+                font-size: 40px;
+                animation: fade 1.5s;
+                font-family: 'Raleway', sans-serif;
+                text-shadow:none">Testing Information</h3>
+                    <a style="color:black;animation: fade 1.5s;font-family: 'Raleway', sans-serif;text-shadow:none"> Type of Test</a>
+                      <div class="form-group">
+                          <input type="text" id='test' class="form-control" placeholder="Antibody, Antigen, or Molecular" value="" />
+                      </div>
+                    <a style="color:black;animation: fade 1.5s;font-family: 'Raleway', sans-serif;text-shadow:none"> Test Result</a>
+                    <div class="form-group">
+                        <input type="textarea" id='result' class="form-control" placeholder="Positive or Negative" value="" />
+                    </div>
+                    <a style="color:black;animation: fade 1.5s;font-family: 'Raleway', sans-serif;text-shadow:none"> Vaccination Status</a>
+                    <div class="form-group">
+                        <input type="textarea" id='vaccination' class="form-control" placeholder="Vaccinated or Unvaccinated" value="" />
+                    </div>
+                      <a style="color:black;animation: fade 1.5s;font-family: 'Raleway', sans-serif;text-shadow:none"> Number of Days of Symptoms</a>
+                      <br>
+                      <select id='days' name="dropdown" required="required">
+                        <option value="0" selected> 0 </option>
+                        <option value="1" selected> 1 </option>
+                        <option value="2" selected> 2 </option>
+                        <option value="3" selected> 3 </option>
+                        <option value="4" selected> 4 </option>
+                        <option value="5" selected> 5 </option>
+                        <option value="6" selected> 6 </option>
+                        <option value="7" selected> 7 </option>
+                        <option value="8" selected> 8 </option>
+                        <option value="9" selected> 9 </option>
+                        <option value="10" selected> 10 </option>
+                      </select>
+                    <br>
+                    <br>
+                        <input type="submit" style = "width: 25%;border-radius: 1rem;padding: 1.5%;border: none;cursor: pointer;font-family: 'Raleway', sans-serif;font-weight:700;color: #fff;background-color: #1abc9c;animation: fade 1.5s;font-size:22;" id='submit' onclick=reccomend() value="Submit" />
+            </div>
+          </div>
+          <br>
+          <h3>Recommendation</h3>
+            <div style="margin-left: 25px">
+            <p id='reccomendation'> Fill out the form to recieve a reccomendation based on your test results. </p>
         </div>
+
+        <script type="text/javascript">
+          function reccomend(){
+            var test = document.getElementById('test').value;
+            var result = document.getElementById('result').value;
+            var vaccine = document.getElementById('vaccination').value;
+            var days = document.getElementById('days').value;
+
+            if(test.toLowerCase() == "antigen"){
+              if(result.toLowerCase() == "positive"){
+                if(vaccine.toLowerCase() == "vaccinated"){
+
+                } else {
+                  if(days >= 3 && days<=5){
+                    var element = document.getElementById('reccomendation');
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                  }
+                }
+              }
+            }
+
+
+            
+          }
+        </script>
 
       </div>
 
