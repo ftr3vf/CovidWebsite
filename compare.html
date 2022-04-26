@@ -95,6 +95,39 @@
             var vaccine = document.getElementById('vaccination').value;
             var days = document.getElementById('days').value;
 
+            if(test.toLowerCase() == "pcr" || "molecular"){
+              if(result.toLowerCase() == "positive"){
+                if(vaccine.toLowerCase() == "vaccinated"){
+                  if(days >= 3 && days<=5){
+                    var element = document.getElementById('reccomendation');
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                  }
+                  else{
+                    var element = document.getElementById('reccomendation');
+                    element.innerHTML = "It cannot be determined whether or not you have COVID-19 since it's either too early since you've been exposed or you are nearing the ending stages of your infection. These specific times of infection could have very little amount of the virus present for the PCR test to pick up on. However, since a PCR test is highly sensitive, there's a good chance that you are negative. Please be cautious however and isolate yourself moderately.";
+                  }
+                } else {
+                  if(days >= 3 && days<=5){
+                    var element = document.getElementById('reccomendation');
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                  }
+                  else{
+                    var element = document.getElementById('reccomendation');
+                    element.innerHTML = "It cannot be determined whether or not you have COVID-19 since it's either too early since you've been exposed or you are nearing the ending stages of your infection. These specific times of infection could have very little amount of the virus present for the PCR test to pick up on. However, since a PCR test is highly sensitive, there's a good chance that you are negative. Please be cautious however and isolate yourself moderately.";
+                  }
+                }
+              }
+              else{
+                if(days >= 3 && days<=5){
+                    var element = document.getElementById('reccomendation');
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                }
+                else{
+                var element = document.getElementById('reccomendation');
+                element.innerHTML = "It cannot be determined whether or not you have COVID-19 since it's either too early since you've been exposed or you are nearing the ending stages of your infection. These specific times of infection could have very little amount of the virus present for the PCR test to pick up on. However, since a PCR test is highly sensitive, there's a good chance that you are negative. Please be cautious however and isolate yourself moderately.";
+                }
+            }
+
             if(test.toLowerCase() == "antigen"){
               if(result.toLowerCase() == "positive"){
                 if(vaccine.toLowerCase() == "vaccinated"){
@@ -102,7 +135,7 @@
                 } else {
                   if(days >= 3 && days<=5){
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                  element.innerHTML = "It cannot be determined whether the antibodies present in your body are caused by a past Covid-19 infection or are from your Covid-19 vaccine. We recommend you follow up with a different PCR test and quarantine in the mean time to limit contact with others.";
                   }
                 }
               }
@@ -112,7 +145,7 @@
               if (result.toLowerCase() == "positive"){
                 if (vaccine.toLowerCase() == "vaccinated"){
                   var element = document.getElementById('reccomendation');
-                  element.innerHTML = "It cannot be determined whether the antibodies present in your body are caused by a past Covid-19 infection or are from your Covid-19 vaccine. We reccomend you follow up with a different PCR test and quarantine in the mean time to limit contact with others.";
+                  element.innerHTML = "It cannot be determined whether the antibodies present in your body are caused by a past Covid-19 infection or are from your Covid-19 vaccine. We recommend you follow up with a different PCR test and quarantine in the mean time to limit contact with others.";
                 }
                 if (vaccine.toLowerCase() == "unvaccinated"){
                   var element = document.getElementById('reccomendation');
