@@ -180,3 +180,8 @@ html, body {
   .col-2 {width: 16.66%;}
   .col-1 {width: 8.33%}
 } 
+
+footer {
+  padding: 20px;
+  background-color: #3498db;
+}
