@@ -128,7 +128,7 @@
                 }
             }
 
-            else if(test.toLowerCase() == "antigen" || "rapid"){
+            if(test.toLowerCase() == "antigen" || "rapid"){
               if(result.toLowerCase() == "positive"){
                 if(vaccine.toLowerCase() == "vaccinated"){
                   if(days >= 3 && days<=5){
@@ -184,7 +184,7 @@
             }
 
 
-            else if (test.toLowerCase() == "antibody"){
+            if (test.toLowerCase() == "antibody"){
               if (result.toLowerCase() == "positive"){
                 if (vaccine.toLowerCase() == "vaccinated"){
                   var element = document.getElementById('reccomendation');
@@ -199,9 +199,6 @@
                 var element = document.getElementById('reccomendation');
                 element.innerHTML = "Your vaccination status should be unvaccinated, and you most likely have not been infected with Covid-19 in the past.";
               }
-            } else {
-                var element = document.getElementById('reccomendation');
-                element.innerHTML = "The information put in cannot be used to make a recomendation, please check that your test name is spelled correctly.";
             }
           }
         }
