@@ -21,7 +21,7 @@
 html, body {
   height: 100%;
   /*background: url(home2.jpeg) no-repeat center center fixed; */
-  background-color: #1abc9c;
+  background-color: #3498db;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -183,5 +183,4 @@ html, body {
 
 footer {
   padding: 20px;
-  background-color: #1abc9c;
 }
