@@ -32,7 +32,7 @@
             <br>
             <br>
             <br>
-            <h1>Compare Tests</h1>
+            <h1>Compare Tests.</h1>
             <div class="container" style = "margin-top: 5%;
         margin-bottom: 5%;
         animation: fade 0.5s;">
@@ -85,7 +85,7 @@
           <br>
           <h3>Recommendation</h3>
             <div style="margin-left: 25px">
-            <p id='reccomendation'> Fill out the form to receive a recommendation based on your test results. </p>
+            <p id='reccomendation'> Fill out the form to recieve a reccomendation based on your test results. </p>
         </div>
 
         <script type="text/javascript">
@@ -128,55 +128,55 @@
                 }
             }
 
-            if(test.toLowerCase() == "antigen"){
+            else if(test.toLowerCase() == "antigen" || "rapid"){
               if(result.toLowerCase() == "positive"){
                 if(vaccine.toLowerCase() == "vaccinated"){
                   if(days >= 3 && days<=5){
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. It is most likely to be the omicrom variant. Try retesting by swabbing the back of the throat and we recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. It is most likely to be the omicrom variant. Try retesting by swabbing the back of the throat and we reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
                   }
                   else if(days >= 5) {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. It is most likely to be the omicrom variant. Try retesting by swabbing the back of the throat and we recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. It is most likely to be the omicrom variant. Try retesting by swabbing the back of the throat and we reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
                   } else {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. It is most likely to be the omicrom variant. Try retesting by swabbing the back of the throat and we recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. It is most likely to be the omicrom variant. Try retesting by swabbing the back of the throat and we reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
                   }
                 } else {
                   if(days >= 3 && days<=5){
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
                   }
                   else if(days >= 5) {
                     var element = document.getElementById('reccomendation');
                     element.innerHTML = "Based on the information input, we believe it is highly likely you had Covid-19. However the viral load may be decreasing as the quarantine period is 5 days. We recomend you do a follow up PCR test and quaratine until those results.";
                   } else {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We recommend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is highly likely you have Covid-19. We reccomend you do a follow up PCR test and in the mean time quarantine to limit contact with others.";
                   }
                 }
               } else {
                 if(vaccine.toLowerCase() == "vaccinated"){
                   if(days >= 3 && days<=5){
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is most likely a common cold. We recommend you do a follow up PCR test just to be safe and to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is most likely a common cold. We reccomend you do a follow up PCR test just to be safe and to limit contact with others.";
                   } else if(days >= 5) {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is most likely a common cold. We recommend you do a follow up PCR test just to be safe and to limit contact with others.";
+                    element.innerHTML = "Based on the information input, we believe it is most likely a common cold. We reccomend you do a follow up PCR test just to be safe and to limit contact with others.";
                   } else {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, we believe it is most likely a common cold. We recommend you do a follow up PCR test just to be safe and to limit contact with others if you felt/feel symptoms but nothing needed if not.";
+                    element.innerHTML = "Based on the information input, we believe it is most likely a common cold. We reccomend you do a follow up PCR test just to be safe and to limit contact with others if you felt/feel symptoms but nothing needed if not.";
                   }
                 } else {
                   if(days >= 3 && days<=5){
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, despite a negative test it could be COVID-19. We recommend you do a follow up PCR test just to be safe and to limit contact with others.";
+                    element.innerHTML = "Based on the information input, despite a negative test it could be COVID-19. We reccomend you do a follow up PCR test just to be safe and to limit contact with others.";
                   } else if(days >= 5) {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, despite a negative test it could be COVID-19. However given the amount of time of the symptoms the viral load should be weakening. We recommend you still a follow up PCR test just to be safe and to limit contact with others.";
+                    element.innerHTML = "Based on the information input, despite a negative test it could be COVID-19. However given the amount of time of the symptoms the viral load should be weakening. We reccomend you still a follow up PCR test just to be safe and to limit contact with others.";
                   } else {
                     var element = document.getElementById('reccomendation');
-                    element.innerHTML = "Based on the information input, despite a negative test it could be COVID-19. However given the amount of time of the symptoms the viral load should be weakening or is non existent. We recommend you still a follow up PCR test just to be safe and to limit contact with others.";
+                    element.innerHTML = "Based on the information input, despite a negative test it could be COVID-19. However given the amount of time of the symptoms the viral load should be weakening or is non existent. We reccomend you still a follow up PCR test just to be safe and to limit contact with others.";
                   }
 
                 }
@@ -184,7 +184,7 @@
             }
 
 
-            if (test.toLowerCase() == "antibody"){
+            else if (test.toLowerCase() == "antibody"){
               if (result.toLowerCase() == "positive"){
                 if (vaccine.toLowerCase() == "vaccinated"){
                   var element = document.getElementById('reccomendation');
@@ -199,7 +199,10 @@
                 var element = document.getElementById('reccomendation');
                 element.innerHTML = "Your vaccination status should be unvaccinated, and you most likely have not been infected with Covid-19 in the past.";
               }
-            } 
+            } else {
+                var element = document.getElementById('reccomendation');
+                element.innerHTML = "The information put in cannot be used to make a reccomendation, please check that your test name is spelled correctly.";
+            }
           }
         }
         </script>
